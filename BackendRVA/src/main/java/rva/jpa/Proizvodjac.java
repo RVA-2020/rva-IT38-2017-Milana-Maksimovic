@@ -2,9 +2,13 @@ package rva.jpa;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
-
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler" })
 /**
  * The persistent class for the proizvodjac database table.
  * 
@@ -25,6 +29,7 @@ public class Proizvodjac implements Serializable {
 
 	private String naziv;
 
+	@JsonIgnore
 	//bi-directional many-to-one association to Proizvod
 	@OneToMany(mappedBy="proizvodjac")
 	private List<Proizvod> proizvods;

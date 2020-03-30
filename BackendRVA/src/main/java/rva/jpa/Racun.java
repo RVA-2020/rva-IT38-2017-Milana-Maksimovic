@@ -2,10 +2,14 @@ package rva.jpa;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 import java.util.List;
 
-
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler" })
 /**
  * The persistent class for the racun database table.
  * 
@@ -26,6 +30,7 @@ public class Racun implements Serializable {
 	@Column(name="nacin_placanja")
 	private String nacinPlacanja;
 
+	@JsonIgnore
 	//bi-directional many-to-one association to StavkaRacuna
 	@OneToMany(mappedBy="racun")
 	private List<StavkaRacuna> stavkaRacunas;

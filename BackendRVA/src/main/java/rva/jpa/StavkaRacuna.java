@@ -2,9 +2,12 @@ package rva.jpa;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.math.BigDecimal;
 
-
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler" })
 /**
  * The persistent class for the stavka_racuna database table.
  * 

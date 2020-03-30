@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import rva.jpa.Proizvod;
 import rva.repository.ProizvodRepository;
+import rva.repository.ProizvodjacRepository;
 
 @RestController
 public class ProizvodRestController {
 	
 	@Autowired
 	private ProizvodRepository proizvodRepository;
-	
+
 
 	@GetMapping("proizvod")
 	public Collection<Proizvod> getProizvodi () {
