@@ -3,6 +3,7 @@ package rva.jpa;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.math.BigDecimal;
@@ -19,7 +20,7 @@ public class StavkaRacuna implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="STAVKA_RACUNA_ID_GENERATOR", sequenceName="STAVKA_RACUNA_SEQ")
+	@SequenceGenerator(name="STAVKA_RACUNA_ID_GENERATOR", sequenceName="STAVKA_RACUNA_SEQ" ,allocationSize = 1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="STAVKA_RACUNA_ID_GENERATOR")
 	private Integer id;
 
@@ -34,11 +35,13 @@ public class StavkaRacuna implements Serializable {
 	private Integer redniBroj;
 
 	//bi-directional many-to-one association to Proizvod
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="proizvod")
 	private Proizvod proizvod;
 
 	//bi-directional many-to-one association to Racun
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="racun")
 	private Racun racun;

@@ -66,11 +66,12 @@ public class RacunRestController {
 	public ResponseEntity<Racun> deleteRacun(@PathVariable ("id") Integer id) {
 		if(!racunRepository.existsById(id))
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		jdbcTemplate.execute("delete from stavka_racuna where racune=" + id);
 		racunRepository.deleteById(id);
 		if(id==-100)
 			jdbcTemplate.execute("INSERT INTO \"racun\" (\"id\",\"datum\",\"nacin_placanja\")"
 					+ "VALUES (-100, '2020-03-30', 'test')");
-		return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<Racun>(HttpStatus.OK);
 	}
 
 }
