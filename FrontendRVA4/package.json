@@ -1,5 +1,5 @@
 {
-  "name": "frontend-rva1",
+  "name": "frontend-rva4",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,12 +12,10 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.3",
-    "@angular/cdk": "^9.2.1",
     "@angular/common": "~9.1.3",
     "@angular/compiler": "~9.1.3",
     "@angular/core": "~9.1.3",
     "@angular/forms": "~9.1.3",
-    "@angular/material": "^9.2.1",
     "@angular/platform-browser": "~9.1.3",
     "@angular/platform-browser-dynamic": "~9.1.3",
     "@angular/router": "~9.1.3",

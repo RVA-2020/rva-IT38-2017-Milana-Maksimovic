@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FrontendRVA1": {
+    "FrontendRVA4": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FrontendRVA1",
+            "outputPath": "dist/FrontendRVA4",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FrontendRVA1:build"
+            "browserTarget": "FrontendRVA4:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FrontendRVA1:build:production"
+              "browserTarget": "FrontendRVA4:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FrontendRVA1:build"
+            "browserTarget": "FrontendRVA4:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "FrontendRVA1:serve"
+            "devServerTarget": "FrontendRVA4:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "FrontendRVA1:serve:production"
+              "devServerTarget": "FrontendRVA4:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "FrontendRVA1"
+  "defaultProject": "FrontendRVA4"
 }
