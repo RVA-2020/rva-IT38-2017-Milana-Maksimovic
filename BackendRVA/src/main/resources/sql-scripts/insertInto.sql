@@ -1,7 +1,7 @@
 --proizvodjac
 
 insert into proizvodjac (id, naziv, adresa, kontakt)
-values (nextval('proizvodjac_seq'), 'Jaffa DOO', 'Svetozara Miletića 16','+38163554789');  
+values (nextval('proizvodjac_seq'), 'Jaffa DOO', 'Svetozara Miletica 16','+38163554789');  
 insert into proizvodjac (id, naziv, adresa, kontakt)
 values (nextval('proizvodjac_seq'), 'Bambi', 'Svetosavska 25','+3816355031');
 insert into proizvodjac (id, naziv, adresa, kontakt)
